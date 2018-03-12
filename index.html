@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/config.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form name="searchForm">
+        <div class="form-input text-center">
+          <h2>ApplyFly</h4>
+        </div>
+        <div class="form-input">
+          <input type="text" placeholder="Search jobs" name="search" />
+        </div>
+        <div class="form-input">
+          <input type="text" placeholder="Search location" name="location"/>
+        </div>
+        <div class="form-input">
+          <button type="button" id="stopSearch" data-show="false">Stop applying :(</button>
+          <button type="button" id="submitSearchForm" data-show="true">Start applying :)</button>
+        </div>
+        <div class="form-input" id="errorsContainer" data-show="false"></div>
+      </form>
+    </div>
+  </body>
+</html>

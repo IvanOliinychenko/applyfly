@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "ApplyFly",
+  "description": "This extension automates the applying with \"simple apply button\" at LinkedIn",
+  "version": "0.0.1",
+  "icons": { 
+    "16": "img/fly_16.png",
+    "48": "img/fly_48.png",
+    "128": "img/fly_128.png" 
+  }, 
+  "browser_action": {
+    "default_icon": "img/fly_16.png",
+    "default_popup": "index.html",
+    "web_accessible_resources": [
+      "img/search.svg",
+      "img/location.svg"
+    ]
+  },
+  "background": {
+    "scripts": ["js/config.js", "js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": [
+      "*://*.linkedin.com/*"
+    ],
+    "js": ["js/config.js", "js/content.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "*://*.linkedin.com/*"
+  ]
+}
